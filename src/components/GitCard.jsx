@@ -13,10 +13,11 @@ const GitCard = ({ name, language, stargazers_count, forks_count, owner }) => {
       alignSelf='normal'
       p='4'
       mt='8'
-      bg='gray.700'
+      bg='gray.200'
+      boxShadow="lg"
       borderRadius='20'
     >
-      <Image w="100%" src={avatar_url} alt={name} p='4' borderRadius='28' />
+      <Image w='100%' src={avatar_url} alt={name} p='4' borderRadius='28' />
       <Heading noOfLines={1} size='lg' py='2'>
         {name}
       </Heading>

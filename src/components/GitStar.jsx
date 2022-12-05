@@ -43,15 +43,29 @@ const GitStar = () => {
       </Heading>
       <Flex mt='6' justifyContent='center' gap='16' borderRadius='50%'>
         <Button
-          bg='teal.400'
-          _active={{ bg: "red.400" }}
+          bg={param === "all" ? "red.400" : "teal.400"}
           onClick={() => handleClick("all")}
         >
           All
         </Button>
-        <Button onClick={() => handleClick("html")}>HTML</Button>
-        <Button onClick={() => handleClick("css")}>CSS</Button>
-        <Button onClick={() => handleClick("javascript")}>JavaScript</Button>
+        <Button
+          bg={param === "html" ? "red.400" : "teal.400"}
+          onClick={() => handleClick("html")}
+        >
+          HTML
+        </Button>
+        <Button
+          bg={param === "css" ? "red.400" : "teal.400"}
+          onClick={() => handleClick("css")}
+        >
+          CSS
+        </Button>
+        <Button
+          bg={param === "javascript" ? "red.400" : "teal.400"}
+          onClick={() => handleClick("javascript")}
+        >
+          JavaScript
+        </Button>
       </Flex>
       {loading && <Heading>Loading...</Heading>}
       {!loading && (

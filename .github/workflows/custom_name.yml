@@ -28,7 +28,7 @@ jobs:
       - name: Build Project
         run: npm run build
       - name: Upload Artifact
-        uses: actions/upload-pages-artifact@v2 #OR v1
+        uses: actions/upload-pages-artifact@v1
         with:
           # name: production-files // optional
           path: ./build

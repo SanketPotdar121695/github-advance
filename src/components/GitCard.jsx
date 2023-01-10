@@ -1,20 +1,20 @@
-import { StarIcon } from "@chakra-ui/icons";
-import { Flex, GridItem, Heading, Image, Text } from "@chakra-ui/react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCodeFork } from "@fortawesome/free-solid-svg-icons";
-import React from "react";
+import { StarIcon } from '@chakra-ui/icons';
+import { Flex, GridItem, Heading, Image, Text } from '@chakra-ui/react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCodeFork } from '@fortawesome/free-solid-svg-icons';
+import React from 'react';
 
 const GitCard = ({ name, language, stargazers_count, forks_count, owner }) => {
   const { avatar_url } = owner;
   return (
     <GridItem
       transition='0.5s'
-      _hover={{ transform: "scale(1.05)", cursor: "pointer" }}
+      _hover={{ transform: 'scale(1.05)', cursor: 'pointer' }}
       alignSelf='normal'
       p='4'
       mt='8'
-      bg='gray.200'
-      boxShadow="lg"
+      bg='whiteAlpha.200'
+      boxShadow='lg'
       borderRadius='20'
     >
       <Image w='100%' src={avatar_url} alt={name} p='4' borderRadius='28' />
@@ -22,7 +22,7 @@ const GitCard = ({ name, language, stargazers_count, forks_count, owner }) => {
         {name}
       </Heading>
       <Text fontWeight='bold' py='2'>
-        {language || "NA"}
+        {language || 'NA'}
       </Text>
       <Flex px='4' justifyContent='space-between' alignItems='center'>
         <Flex gap='4' justifyContent='center' alignItems='center'>
